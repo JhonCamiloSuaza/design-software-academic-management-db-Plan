@@ -126,3 +126,19 @@ databaseChangeLog:
             path: ../../05_rollbacks/01_ddl/03_tables/008_create_table_outbox.rollback.sql
             relativeToChangelogFile: true
             stripComments: false
+
+  - changeSet:
+      id: 009-create-table-processed-event
+      author: jhon-camilo-suaza-sanchez
+      labels: "R1,resiliencia,mensajeria,idempotencia"
+      comment: Stores processed message ids so the R1 consumer is idempotent.
+      changes:
+        - sqlFile:
+            path: 009_create_table_processed_event.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/009_create_table_processed_event.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
