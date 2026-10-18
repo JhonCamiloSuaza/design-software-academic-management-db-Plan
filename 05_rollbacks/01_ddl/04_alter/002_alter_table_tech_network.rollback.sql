@@ -1,0 +1,2 @@
+ALTER TABLE academic_management.tech_network DROP CONSTRAINT fk_tech_network_tech_line;
+ALTER TABLE academic_management.tech_network DROP CONSTRAINT uq_tech_network_tech_line_id_code;

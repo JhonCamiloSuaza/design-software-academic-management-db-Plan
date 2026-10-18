@@ -1,0 +1,2 @@
+ALTER TABLE academic_management.knowledge_network DROP CONSTRAINT fk_knowledge_network_tech_network;
+ALTER TABLE academic_management.knowledge_network DROP CONSTRAINT uq_knowledge_network_tech_network_id_code;

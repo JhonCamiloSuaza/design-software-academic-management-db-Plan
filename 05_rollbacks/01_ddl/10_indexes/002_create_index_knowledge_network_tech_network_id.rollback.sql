@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS academic_management.ix_knowledge_network_tech_network_id;

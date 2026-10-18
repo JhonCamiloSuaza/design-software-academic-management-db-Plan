@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS academic_management.ix_enrollment_ficha_status;

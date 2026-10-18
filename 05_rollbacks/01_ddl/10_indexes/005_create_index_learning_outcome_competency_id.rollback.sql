@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS academic_management.ix_learning_outcome_competency_id;

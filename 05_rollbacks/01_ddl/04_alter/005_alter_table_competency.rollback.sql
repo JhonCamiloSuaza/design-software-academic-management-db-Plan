@@ -1,0 +1,3 @@
+ALTER TABLE academic_management.competency DROP CONSTRAINT ck_competency_hours;
+ALTER TABLE academic_management.competency DROP CONSTRAINT fk_competency_training_program;
+ALTER TABLE academic_management.competency DROP CONSTRAINT uq_competency_program_id_sena_code;

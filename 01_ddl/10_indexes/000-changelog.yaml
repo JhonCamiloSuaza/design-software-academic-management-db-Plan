@@ -1,0 +1,128 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-index-tech-network-tech-line-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index on tech_network for tech_line_id.
+      changes:
+        - sqlFile:
+            path: 001_create_index_tech_network_tech_line_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/001_create_index_tech_network_tech_line_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 002-index-knowledge-network-tech-network-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index on knowledge_network for tech_network_id.
+      changes:
+        - sqlFile:
+            path: 002_create_index_knowledge_network_tech_network_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/002_create_index_knowledge_network_tech_network_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 003-index-training-program-knowledge-network-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index on training_program for knowledge_network_id.
+      changes:
+        - sqlFile:
+            path: 003_create_index_training_program_knowledge_network_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/003_create_index_training_program_knowledge_network_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 004-index-competency-program-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index on competency for program_id.
+      changes:
+        - sqlFile:
+            path: 004_create_index_competency_program_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/004_create_index_competency_program_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 005-index-learning-outcome-competency-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index on learning_outcome for competency_id.
+      changes:
+        - sqlFile:
+            path: 005_create_index_learning_outcome_competency_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/005_create_index_learning_outcome_competency_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 006-index-enrollment-ficha-status
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index for active status filtering (frequent).
+      changes:
+        - sqlFile:
+            path: 006_create_index_enrollment_ficha_status.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/006_create_index_enrollment_ficha_status.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 007-index-enrollment-ficha-training-center-id
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates index for active fichas by center.
+      changes:
+        - sqlFile:
+            path: 007_create_index_enrollment_ficha_training_center_id.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/007_create_index_enrollment_ficha_training_center_id.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 008-index-enrollment-ficha-training-center-id-status
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,indexes"
+      comment: Creates composite index for dashboard queries by center and status.
+      changes:
+        - sqlFile:
+            path: 008_create_index_enrollment_ficha_training_center_id_status.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/008_create_index_enrollment_ficha_training_center_id_status.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

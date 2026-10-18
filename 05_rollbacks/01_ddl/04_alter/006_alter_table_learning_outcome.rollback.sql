@@ -1,0 +1,2 @@
+ALTER TABLE academic_management.learning_outcome DROP CONSTRAINT fk_learning_outcome_competency;
+ALTER TABLE academic_management.learning_outcome DROP CONSTRAINT uq_learning_outcome_competency_id_code;

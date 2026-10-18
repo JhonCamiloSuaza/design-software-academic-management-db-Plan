@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-academic-management-schema
+      author: Yerson Rubiano 
+      labels: "HU-DB-007,ddl,base,schemas"
+      comment: Creates the academic management schema.
+      changes:
+        - sqlFile:
+            path: 001_create_schema_academic_management.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/001_create_schema_academic_management.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

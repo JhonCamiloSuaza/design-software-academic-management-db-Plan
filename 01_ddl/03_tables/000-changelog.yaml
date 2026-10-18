@@ -1,0 +1,128 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-table-tech-line
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the tech_line table.
+      changes:
+        - sqlFile:
+            path: 001_create_table_tech_line.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/001_create_table_tech_line.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 002-create-table-tech-network
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the tech_network table.
+      changes:
+        - sqlFile:
+            path: 002_create_table_tech_network.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/002_create_table_tech_network.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 003-create-table-knowledge-network
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the knowledge_network table.
+      changes:
+        - sqlFile:
+            path: 003_create_table_knowledge_network.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/003_create_table_knowledge_network.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 004-create-table-training-program
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the training_program table.
+      changes:
+        - sqlFile:
+            path: 004_create_table_training_program.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/004_create_table_training_program.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 005-create-table-competency
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the competency table.
+      changes:
+        - sqlFile:
+            path: 005_create_table_competency.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/005_create_table_competency.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 006-create-table-learning-outcome
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the learning_outcome table.
+      changes:
+        - sqlFile:
+            path: 006_create_table_learning_outcome.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/006_create_table_learning_outcome.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 007-create-table-enrollment-ficha
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the enrollment_ficha table.
+      changes:
+        - sqlFile:
+            path: 007_create_table_enrollment_ficha.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/007_create_table_enrollment_ficha.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 008-create-table-outbox
+      author: kevin-culma
+      labels: "HU-ACAD-13,ddl,outbox"
+      comment: Creates transactional outbox for academic domain events.
+      changes:
+        - sqlFile:
+            path: 008_create_table_outbox.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/008_create_table_outbox.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

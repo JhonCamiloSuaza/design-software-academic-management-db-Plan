@@ -1,0 +1,4 @@
+ALTER TABLE academic_management.training_program DROP CONSTRAINT ck_training_program_total_hours;
+ALTER TABLE academic_management.training_program DROP CONSTRAINT ck_training_program_training_level;
+ALTER TABLE academic_management.training_program DROP CONSTRAINT fk_training_program_knowledge_network;
+ALTER TABLE academic_management.training_program DROP CONSTRAINT uq_training_program_program_code;

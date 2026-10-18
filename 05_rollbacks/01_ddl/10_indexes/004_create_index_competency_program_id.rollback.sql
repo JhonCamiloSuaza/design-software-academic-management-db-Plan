@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS academic_management.ix_competency_program_id;

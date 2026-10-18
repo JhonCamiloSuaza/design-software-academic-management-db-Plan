@@ -1,0 +1,131 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-constraints-tech-line
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to tech_line table.
+      changes:
+        - sqlFile:
+            path: 001_alter_table_tech_line.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/001_alter_table_tech_line.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 002-constraints-tech-network
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to tech_network table.
+      changes:
+        - sqlFile:
+            path: 002_alter_table_tech_network.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/002_alter_table_tech_network.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 003-constraints-knowledge-network
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to knowledge_network table.
+      changes:
+        - sqlFile:
+            path: 003_alter_table_knowledge_network.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/003_alter_table_knowledge_network.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 004-constraints-training-program
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to training_program table.
+      changes:
+        - sqlFile:
+            path: 004_alter_table_training_program.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/004_alter_table_training_program.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 005-constraints-competency
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to competency table.
+      changes:
+        - sqlFile:
+            path: 005_alter_table_competency.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/005_alter_table_competency.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 006-constraints-learning-outcome
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to learning_outcome table.
+      changes:
+        - sqlFile:
+            path: 006_alter_table_learning_outcome.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/006_alter_table_learning_outcome.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: 007-constraints-enrollment-ficha
+      author: tu_nombre_aqui
+      labels: "HU-DB-007,ddl,base,constraints"
+      comment: Adds constraints to enrollment_ficha table.
+      changes:
+        - sqlFile:
+            path: 007_alter_table_enrollment_ficha.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/007_alter_table_enrollment_ficha.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+  - changeSet:
+      id: quality-fixes-academic-950
+      author: jesus-gonzalez
+      labels: "quality,v2"
+      comment: id DEFAULT gen_random_uuid e indices de FK faltantes
+      changes:
+        - sqlFile: {path: 950_quality_fixes.sql, relativeToChangelogFile: true, splitStatements: true, stripComments: false}
+      rollback:
+        - sql: {sql: "SELECT 1;"}
+
+  - changeSet:
+      id: remediation-academic-960
+      author: jesus-gonzalez
+      labels: "remediation,congruence,v2"
+      comment: "R3: CHECK faltante en enrollment_ficha.status (congruencia contrato<->docs<->BD)"
+      changes:
+        - sqlFile: {path: 960_remediation.sql, relativeToChangelogFile: true, splitStatements: true, stripComments: false}
+      rollback:
+        - sqlFile: {path: ../../05_rollbacks/01_ddl/04_alter/960_remediation.rollback.sql, relativeToChangelogFile: true, stripComments: false}

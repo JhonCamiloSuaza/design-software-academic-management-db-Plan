@@ -1,0 +1,1 @@
+ALTER TABLE academic_management.tech_line DROP CONSTRAINT uq_tech_line_code;

@@ -1,0 +1,5 @@
+ALTER TABLE academic_management.enrollment_ficha DROP CONSTRAINT ck_enrollment_ficha_max_capacity;
+ALTER TABLE academic_management.enrollment_ficha DROP CONSTRAINT ck_enrollment_ficha_training_modality;
+ALTER TABLE academic_management.enrollment_ficha DROP CONSTRAINT ck_enrollment_ficha_training_shift;
+ALTER TABLE academic_management.enrollment_ficha DROP CONSTRAINT fk_enrollment_ficha_training_program;
+ALTER TABLE academic_management.enrollment_ficha DROP CONSTRAINT uq_enrollment_ficha_ficha_number;

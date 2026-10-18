@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS academic_management.learning_outcome;

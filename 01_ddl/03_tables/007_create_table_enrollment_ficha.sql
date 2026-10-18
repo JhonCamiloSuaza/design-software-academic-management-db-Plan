@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS academic_management.enrollment_ficha (
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    ficha_number VARCHAR(20) NOT NULL,
+    program_id UUID NOT NULL,
+    program_version INT NOT NULL,
+    training_center_id UUID NOT NULL,
+    status VARCHAR(30) NOT NULL DEFAULT 'INDUCTION',
+    start_date DATE NOT NULL,
+    expected_end_date DATE,
+    actual_end_date DATE,
+    training_shift VARCHAR(20) NOT NULL,
+    training_modality VARCHAR(20) NOT NULL,
+    max_capacity INT NOT NULL,
+    row_version INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    created_by UUID NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_by UUID NOT NULL,
+    CONSTRAINT pk_enrollment_ficha PRIMARY KEY (id)
+);

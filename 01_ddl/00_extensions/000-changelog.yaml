@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-academic-management-tables
+      author: Yerson Rubiano 
+      labels: "HU-DB-007,ddl,base,tables"
+      comment: Creates the academic management tables (tech_line, tech_network, knowledge_network, training_program, competency, learning_outcome, enrollment_ficha).
+      changes:
+        - sqlFile:
+            path: 001_create_academic_management_tables.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/00_extensions/001_create_academic_management_tables.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

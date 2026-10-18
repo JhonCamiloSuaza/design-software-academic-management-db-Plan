@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: seed-demo-academic-001
+      author: jesus-gonzalez
+      labels: "seed,demo"
+      comment: Demo - linea tecnologica, programa ADSO y ficha
+      changes:
+        - sqlFile: {path: 001_seed_demo.sql, relativeToChangelogFile: true, splitStatements: true, stripComments: false}
+      rollback:
+        - sql: {sql: "DELETE FROM academic_management.enrollment_ficha WHERE id='b0000000-0000-0000-0000-000000000005'; DELETE FROM academic_management.training_program WHERE id='b0000000-0000-0000-0000-000000000004'; DELETE FROM academic_management.knowledge_network WHERE id='b0000000-0000-0000-0000-000000000003'; DELETE FROM academic_management.tech_network WHERE id='b0000000-0000-0000-0000-000000000002'; DELETE FROM academic_management.tech_line WHERE id='b0000000-0000-0000-0000-000000000001';"}

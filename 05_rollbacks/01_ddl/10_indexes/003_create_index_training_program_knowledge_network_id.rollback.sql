@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS academic_management.ix_training_program_knowledge_network_id;
